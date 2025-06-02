@@ -1,3 +1,21 @@
+#!/usr/bin/env python3
+"""
+Annual Maxima Multi-Year Combiner
+
+Usage:
+    python 2p.CombineAM.py <amc_key> <file_key>
+
+Arguments:
+    amc_key     : Prefix identifier used in annual maxima filenames
+    file_key    : Suffix identifier used in annual maxima filenames
+    
+Author: Benjamin FitzGerald
+Date: 6/2/2025
+Version: 2.1
+Note: Companion script to annual maxima calculator for multi-year analysis
+"""
+
+
 import xarray as xr
 import sys
 
