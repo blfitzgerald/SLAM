@@ -12,7 +12,7 @@ Submitted to *Journal of Hydrology*, June 2, 2025
 
 ## Overview
 
-This project uses a four-stage pipeline implemented with HTCondor to create a transposition domain for a watershed of interest using a gridded precipitation dataset. Each stage is run as a distinct Condor job with its own `submit` file, executable script, and Python code.
+This project uses a four-stage pipeline implemented with HTCondor to create a transposition domain for a watershed of interest using a gridded precipitation dataset. Each stage is run as a distinct Condor job with its own input file, `submit` file, executable script, and Python code.
 
 ---
 
