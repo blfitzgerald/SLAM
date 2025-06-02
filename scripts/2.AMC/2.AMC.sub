@@ -1,0 +1,31 @@
+include : $(RunFile)
+universe = vanilla
+WantFlocking = true
+WantGlideIn = true
+
+initialdir = $(AMCOUT)
+executable = $(AMCEX)
+
+error = Errors/job_$(Cluster)_$(Process).err
+log = Logs/job_$(Cluster)_$(Process).log
+output=Outputs/job_$(Cluster)_$(Process).out
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT_OR_EVICT
+
+jobnum=$INT(LASTYEAR)-$INT(FIRSTYEAR)+1
+
+year= $(Process) + $(FIRSTYEAR)
+year2 = $INT(year,%d)
+
+arguments =$(ENVName) $(AMCCODE) $(DUR) $(year2) $(AMStart) $(AMEnd) $(AMKEY) $(OUTPUTFORMAT) 
+
+transfer_input_files = $(WAPLOC)/WAPs.$(year2).$(PRECKEY).$(RESKEY).$(HUC).tar.gz,\
+$(CODELOC)/$(AMCCODE),\
+$(ENVLink)
+
+request_cpus =  $(AMCCPUs)
+request_memory = $INT(AMCMemory)GB
+request_disk = $INT(AMCDisk)GB
+
+queue $INT(jobnum)

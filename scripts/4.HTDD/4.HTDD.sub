@@ -1,0 +1,26 @@
+include : $(RunFile)
+universe = vanilla
+WantFlocking = true
+WantGlideIn = true
+
+initialdir=$(HTDDOUT)
+executable=$(HTDDEX)
+error=Errors/job_$(Cluster)_$(Process).err
+output=Outputs/job_$(Cluster)_$(Process).out
+
+arguments = $(ENVNAME) $(HTDDCODE) $(gp) $(WSNAME) $(PRECIPVAR) $(OUTPUTFORMAT) $(COMPKEY)
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT_OR_EVICT
+
+transfer_input_files = $(LMLOC)/$(LMCFile),\
+$(WSAMLOC)/$(WSAMFile),\
+$(WSLOC)$(WSNAME).shp,\
+$(WSLOC)$(WSNAME).shx,\
+$(CODELOC)/$(HTDDCODE),\
+$(ENVLINK)
+
+request_cpus =  $(HTDDCPUs)
+request_memory = $INT(HTDDMemory)GB
+request_disk = $INT(HTDDDisk)GB
+
+queue gp from $(GSL)

@@ -1,0 +1,72 @@
+RUNLOC = /home/bfitzgerald4/HUC4SLAM/Runs/16kmAORC/$(HUC4)/				
+# Location of where jobs are being run from on submit server. Wise to create and use a separate project folder.
+CODELOC = /home/bfitzgerald4/HUC4SLAM/SLAM_Codes/						
+# Location of the folder with the codes
+ENVNAME = SLAM_env									
+# Name of environment used-- most likely SLAM_env
+ENVLINK = $(CODELOC)SLAM_env.tar.gz					
+# Location/Link for the environment
+
+WSNAME = WS									
+# Name of watershed file (before .shp)
+WSLOC = /home/bfitzgerald4/HUC4SLAM/shapefiles/$(HUC4)/				
+
+PRECIPVAR = precrate									
+# Variable for precipitation e.g. precrate, precip, etc. 
+
+TSPERDAY = 24
+TSUnit=hr
+# Timesteps per dayfile
+
+HTDDOUT = $(RUNLOC)
+HTDDEX = $(CODELOC)4.HTDD.sh
+HTDDCODE = 4.HTDD.py
+# Location for Outputs for HTDD Process
+
+LMLOC=$(RUNLOC)/LMs/
+# Location of the L-Moment Grid Files Used
+
+WSAMLOC=$(RUNLOC)
+# Location of the watershed annual maxima record
+
+DPKey=
+SCALEKey= $(DPKey).base
+COMPKey= mean
+AMKey= Annual
+# File Keys
+
+GSL=/home/bfitzgerald4/HUC4SLAM/Runs/SLAMGSLs.txt
+# Location of file with gps in them
+
+HTDDCPUs=1
+HTDDMemory=5
+HTDDDisk=5
+HTDDRetries=0
+# This configures how the job runs on CHTC. Adjust if you get a specific warning for more resources.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

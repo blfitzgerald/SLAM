@@ -1,0 +1,76 @@
+RUNLOC = /home/bfitzgerald4/HUC4SLAM/Runs/16kmAORC/$(HUC)/				
+# Location of where jobs are being run from on submit server. Wise to create and use a separate project folder.
+
+CODELOC = /home/bfitzgerald4/HUC4SLAM/SLAM_Codes/						
+# Location of the folder with the codes
+
+ENVNAME = SLAM_env									
+# Name of environment used-- most likely SLAM_env
+
+ENVLINK = $(CODELOC)SLAM_env.tar.gz					
+# Location/Link for the environment
+
+FIRSTYEAR = 1979									
+# First year of data to use
+
+LASTYEAR = 2023									
+# Last year of data to use
+
+TSPERDAY = 24
+# How many timesteps are in each daily file? (i.e. 24 for hourly, 1 for daily)
+
+AMCOUT = $(RUNLOC)
+# Location for Outputs for AMC Process
+
+AMCEX = $(CODELOC)2.AMC.sh
+# Location of executable file
+
+AMCCODE = $(CODELOC)2.AMC.py
+# Location of python code
+
+WAPLOC=$(RUNLOC)/WAPs/
+# Location of yearly TARs of WAP files 
+
+AMStart=0101
+# Day of year to start maximum calculation on (e.g. if limiting to season adjust to start of season)
+
+AMEnd=1231
+# Day of year to end maximum calculation on (e.g. if limiting to season adjust to start of season)
+
+PRECKEY=AORC
+RESKEY=16km
+AMKey=Annual
+TSKey=hr
+# Output Keys
+
+
+# Text to indicate what this is the annual maxima of. 
+
+AMCCPUs=1
+AMCMemory=15
+AMCDisk=5
+AMCRetries=0
+# This configures how the job runs on CHTC. Adjust if you get a specific warning for more resources.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

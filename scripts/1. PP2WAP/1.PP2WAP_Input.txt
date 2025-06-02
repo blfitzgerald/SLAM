@@ -1,0 +1,77 @@
+RUNLOC = /home/bfitzgerald4/HUC4SLAM/Runs/16kmAORC/$(HUC)/				
+# Location of where jobs are being run from on submit server. Wise to create and use a separate project folder.
+
+CODELOC = /home/bfitzgerald4/HUC4SLAM/SLAM_Codes/						
+# Location of the folder with the codes
+
+ENVNAME = SLAM_env									
+# Name of environment used-- most likely SLAM_env
+
+ENVLINK = $(CODELOC)SLAM_env.tar.gz					
+# Location/Link for the environment
+
+WSNAME = WS									
+# Name of watershed shapefile (before .shp/.shx)
+
+WSLOC = /home/bfitzgerald4/HUC4SLAM/shapefiles/$(HUC)/				
+# Location of watershed shapefile
+
+PRECIPVAR = precrate									
+# Variable for precipitation e.g. precrate, precip, etc. 
+
+LATNAME = latitude									
+# Does dataset use lat, latitude, something else?
+
+LONNAME = longitude									
+# Does dataset use lon, longitude, something else?
+
+TSPERDAY = 24
+# How many timesteps are in each daily file? (i.e. 24 for hourly, 1 for daily)
+
+PP2WAPOUT = $(RUNLOC)
+# Destination for outputs for PP2WAP Process
+
+PP2WAPEX = $(CODELOC)1.PP2WAP.sh
+# Location of executable file
+
+PP2WAPCODE = $(CODELOC)1.PP2WAP.py
+# Location of python code
+
+PP2WAPInput = /home/bfitzgerald4/HUC4SLAM/Runs/16kmAORC/PP2WAPInput.txt
+# List of input files to be used for each job. Should be created with code 0.CreatePP2WAPInputs.py
+
+PRECKEY=AORC
+RESKEY=16km
+# Output Keys
+
+PP2WAPCPUs=1
+PP2WAPMemory=5
+PP2WAPDisk=5
+PP2WAPRetries=0
+# This configures how the job runs on CHTC. Adjust if you get a specific warning for more resources.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

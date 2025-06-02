@@ -1,0 +1,24 @@
+include : $(RunFile)
+universe = vanilla
+WantFlocking = true
+WantGlideIn = true
+
+initialdir=$(PP2WAPOUT)
+
+executable = $(PP2WAPEX)
+max_idle=2500
+max_retries = $(PP2WAPRetries)
+
+error = Errors/job_$(Cluster)_$(Process).err
+log = Logs/job_$(Cluster)_$(Process).log
+output = Outputs/job_$(Cluster)_$(Process).log
+
+arguments = $(ENVNAME) $(PP2WAPCODE) $(WSNAME) $(PRECIPVAR) $(LONNAME) $(LATNAME) $(TSPERDAY) $(OUTPUTFORMAT)
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+request_cpus = $(PP2WAPCPUs)
+request_memory = $INT(PP2WAPMemory)GB
+request_disk = $INT(PP2WAPDisk)GB
+
+queue transfer_input_files from $(PP2WAPInput)

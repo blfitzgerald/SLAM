@@ -1,0 +1,102 @@
+RUNLOC = /home/bfitzgerald4/HUC4SLAM/Runs/16kmAORC/$(HUC4)/				
+# Location of where jobs are being run from on submit server. Wise to create and use a separate project folder.
+
+CODELOC = /home/bfitzgerald4/HUC4SLAM/SLAM_Codes/						
+# Location of the folder with the codes
+
+ENVNAME = SLAM_env									
+# Name of environment used-- most likely SLAM_env
+
+ENVLINK = $(CODELOC)SLAM_env.tar.gz					
+# Location/Link for the environment
+
+WSNAME = WS									
+# Name of watershed file (before .shp)
+
+WSLOC = /home/bfitzgerald4/HUC4SLAM/shapefiles/$(HUC4)/				
+
+PRECIPPATH = /home/bfitzgerald4/Datasets/AORC16km/			
+# Where is the precipitation located?
+
+PRECIPPREFFIX = AORC.							
+# String before date code for precip data
+
+PRECIPSUFFIX = .precip.nc										
+# String after date code for precip data
+
+PRECIPVAR = precrate									
+# Variable for precipitation e.g. precrate, precip, etc. 
+
+LATNAME = latitude									
+# Does dataset use lat, latitude, something else?
+
+LONNAME = longitude									
+# Does dataset use lon, longitude, something else?
+
+TSPERDAY = 24
+# How many timesteps are in each daily file? (i.e. 24 for hourly, 1 for daily)
+
+LMCOUT = $(RUNLOC)
+# Location for Outputs for LMC Process
+
+LMCEX = $(CODELOC)3b.LMC.sh
+# Location of executable file
+
+LMCCODE = $(CODELOC)3b.LMC.py
+# Location of python code
+
+LMINPUT=$(RUNLOC)
+# Location of the input files for duration of interest
+
+INPUTTXT=Input.$(DUR)hr.txt
+# Location of Input File
+
+AMLOC=$(RUNLOC)/AMs/
+# Location of AM File
+
+AMKey=Annual
+# Text to indicate what this is the annual maxima of. 
+
+DPLoc=/home/bfitzgerald4/HUC4SLAM/Runs/16kmAORC
+DPFile=2yr_design_rainfall_$(DUR).gumbel.nc
+DPKEY=2yrDPGum
+# Design Precipitation information
+
+doMean=True
+doMedian=True
+doStandard=True
+doNormalized=True
+doRescaled=True
+# LM versions to output
+
+LMCCPUs=1
+LMCMemory=5
+LMCDisk=5
+LMCRetries=0
+# This configures how the job runs on CHTC. Adjust if you get a specific warning for more resources.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+include : $(RunFile)
+universe = vanilla
+WantFlocking = true
+WantGlideIn = true
+
+initialdir=$(LMCOUT)
+executable=$(LMCEX)
+
+error=Errors/job_$(Cluster)_$(Process).err
+output=Outputs/job_$(Cluster)_$(Process).out
+log = Logs/job_$(Cluster)_$(Process).log
+
+arguments = $(ENVNAME) $(LMCCODE) $(process) $(DUR) $(LATNAME) $(LONNAME) $(PRECIPVAR) $(PRECIPPREFFIX) $(PRECIPSUFFIX) $(WSNAME) $(GROUPSIZE) $(DPFile) $(DPKEY) $(doMean) $(doMedian) $(doStandard) $(doNormalized) $(doRescaled) $(OUTPUTFORMAT)
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT_OR_EVICT
+
+request_cpus = $(LMCCPUs)
+request_memory = $(LMCMemory)GB
+request_disk = $(LMCDisk)GB
+
+queue transfer_input_files from $(LMINPUT)$(INPUTTXT)
