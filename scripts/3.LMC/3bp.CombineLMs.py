@@ -1,3 +1,24 @@
+#!/usr/bin/env python3
+"""
+L-Moments all Longitude Combiner
+
+Usage:
+    python 2p.CombineLMs.py <LMLoc> <AMKey> <file_key1> <file_key2>
+
+
+Arguments:
+    LMLOC_key    : Where are LM column files coming from
+    AM_key       : identifier used in annual maxima filenames
+    file_key1    : Suffix identifier used in LM filenames
+    file_key2    : Suffix identifier used in LM filenames
+
+Author: Benjamin FitzGerald
+Date: 6/2/2025
+Version: 2.1
+Note: Companion script to annual maxima calculator for multi-year analysis
+"""
+
+
 import xarray as xr
 import sys
 
