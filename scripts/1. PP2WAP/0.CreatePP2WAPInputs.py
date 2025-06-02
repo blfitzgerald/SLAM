@@ -7,7 +7,7 @@ and generates an output file containing file paths for daily files grouped into 
 specified number of paths per line. Each line is appended with predefined 
 suffix values that include the other files need for the code to run.
 Usage:
-    python script.py <root_directory> <output_file> <files_per_line>
+    python 0.CreatePP2WAPInputs.py <root_directory> <output_file> <files_per_line>
 
 Arguments:
     root_directory  : Root directory to search for .nc files recursively
