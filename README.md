@@ -29,7 +29,7 @@ The pipeline includes the following stages:
 3. **Stage 3 – L-Moment Calculation (3.LMC)**  
    For each transposition, computes the composite of annual maxima and calculates L-moments for each grid cell in the composite.
 
-4. **Stage 4 – Hypothesis Test and Final Domain Drawing((4.HTDD)**  
+4. **Stage 4 – Hypothesis Test and Final Domain Drawing (4.HTDD)**  
    Performs a hypothesis test comparing the L-moments of transpositions to the original watershed. A final domain is drawn based on statistically similar regions.
 
 Each stage is organized in its own subdirectory under `scripts/` and can be submitted independently using `condor_submit`.
