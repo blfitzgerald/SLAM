@@ -5,13 +5,6 @@ Hypothesis Test for Comparing L-Moments of Watershed Average Precipitation Data 
 This script performs statistical analysis of precipitation data using Monte Carlo analysis of Watershed Annual Maxima Record to compare similarity of the L-moments of the transposed watershed shapes.  
 It uses False Discovery Rate (FDR) correction to determine which areas pass statistical tests for multiple L-moment statistics. The finds the passing locations contiguous to the untransposed watershed and draws the final domain. 
 
-Author: Benjamin FitzGerald
-Created: [Dat
-Last Modified: [Date]
-
-Usage:
-    python script.py <significance_level> <watershed_shapefile> <rain_variable> <output_key> <composite_method>
-
 Arguments:
     significance_level: Float between 0 and 1 (e.g., 0.05 for 5% significance)
     watershed_shapefile: Path to shapefile without .shp extension
@@ -28,6 +21,10 @@ Dependencies:
     - xarray, numpy, scipy, statsmodels
     - fiona, rasterio, geopandas, shapely
     - lmoments3 for L-moment calculations
+
+Author: Benjamin FitzGerald
+Date: Last updated 6/2/2025
+Version: 2.1
 """
 
 import xarray as xr
