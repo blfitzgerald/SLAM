@@ -7,9 +7,10 @@ This repository contains the full HTCondor-enabled codebase for the project desc
 **"An L-Moments-Based Hypothesis Test to Identify Homogeneous Storm Transposition Regions"**  
 Benjamin FitzGerald, Daniel Wright, Lei Yan, Alyssa Hendricks Dietrich, and Antonia Sebastian  
 Submitted to *Journal of Hydrology*, June 2, 2025  
+Preprint Link: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5292988
 
-Preprint Can be found here: 
-https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5292988
+
+
 ---
 
 ## Overview
