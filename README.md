@@ -38,3 +38,5 @@ The pipeline includes the following stages:
 Each stage is organized in its own subdirectory under `scripts/` and can be submitted independently using `condor_submit`.
 
 ---
+
+The latest version of SLAM is distributed under the MIT open source license: https://opensource.org/licenses/MIT
