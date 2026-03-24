@@ -171,7 +171,7 @@ print(f"Watershed data shape: {WSShape}")
 print(f"Running bootstrap sampling with {ntrials} trials...")
 
 # Generate random year indices for bootstrap sampling
-YearList = np.random.randint(0, WSShape[0]-1, size=[WSShape[0], ntrials])
+YearList = np.random.randint(0, WSShape[0], size=[WSShape[0], ntrials])
 lmoms = np.zeros([5, ntrials])
 
 # Bootstrap loop: randomly sample years, compute composite, calculate L-moments
